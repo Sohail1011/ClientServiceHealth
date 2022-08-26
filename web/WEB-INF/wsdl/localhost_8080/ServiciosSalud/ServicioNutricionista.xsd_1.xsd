@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Eclipse Metro/2.4.8 (RELEASE-2.4.8-e044505; 2022-01-04T13:29:23+0000) JAXWS-RI/2.3.5 JAXWS-API/2.3.3 JAXB-RI/2.3.5 JAXB-API/2.3.3 git-revision#e044505. --><xs:schema xmlns:tns="http://ws.company.pe/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.company.pe/">
+
+<xs:element name="calculaIMC" type="tns:calculaIMC"/>
+
+<xs:element name="calculaIMCResponse" type="tns:calculaIMCResponse"/>
+
+<xs:element name="calculaTasaMet" type="tns:calculaTasaMet"/>
+
+<xs:element name="calculaTasaMetResponse" type="tns:calculaTasaMetResponse"/>
+
+<xs:complexType name="calculaTasaMet">
+<xs:sequence>
+<xs:element name="genero" type="xs:string" minOccurs="0"/>
+<xs:element name="estatura" type="xs:double"/>
+<xs:element name="peso" type="xs:double"/>
+<xs:element name="edad" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculaTasaMetResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculaIMC">
+<xs:sequence>
+<xs:element name="estatura" type="xs:double"/>
+<xs:element name="peso" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculaIMCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
